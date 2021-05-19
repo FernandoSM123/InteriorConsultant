@@ -1,0 +1,321 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    background-color: #181719;
+    display: flex;
+    flex-direction: column;
+    color: #ffff;
+}
+
+/*1. header*/
+
+header{
+    padding: 30px;
+    background-color: #403d42;
+}
+
+h1{
+    text-align: center;
+}
+
+/*2. box1*/
+
+.box1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.box1 > div{
+    width: 50%;
+    padding: 15px;
+}
+
+/*2-1. box1-1*/
+
+.box1-1{
+    width: 30% !important;
+}
+
+.box1-1 > button{
+    padding: 10px;
+    border: 2px solid white;
+    background-color: #181719;
+    color: white;
+    text-transform: uppercase;
+}
+
+.box1-1 > button:hover{
+    background-color: white;
+    color: #181719;
+    border-color: #181719;
+}
+
+/*2-2. box1-2*/
+
+.box1-2{
+    width: 70% !important;
+    display: flex;
+    justify-content: right;
+}
+
+/*2-2. navbar*/
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.closeBtn{
+    font-size: 30px;
+    cursor: pointer;
+    margin: 10px;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+.check1:checked ~ ul{
+    left: 0%;
+    z-index: 1;
+}
+
+nav{
+    text-align: right;
+    width: 100%;
+    position: relative;
+
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+}
+
+nav ul li{
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+    text-shadow: 0px 0px 1px white;
+    color: white;
+}
+
+/*3. box2*/
+
+.box2{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+
+/*3-1. box2-1*/
+
+.box2-1{
+    padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+.box2-1 > h3,p{
+    padding: 15px;
+}
+
+.box2-1 > button{
+    margin-left: 10px;
+    padding: 5px;
+    border: none;
+    background-color: #181719;
+    color: white;
+    border-radius: 7px;
+}
+
+.box2-1 > button:hover{
+    background-color: white;
+    color: #181719;
+}
+
+/*3-2. box2-2*/
+
+.box2-2{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding-top:15px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+
+.box2-2 > img{
+    width: 100%;
+    height: auto;
+    max-width: 290px;
+}
+
+/*3-2-1. suBox*/
+
+.subBox{
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    top: 190px;
+    left: 28px;
+    background-color: #181719;
+    width: 85%;
+    border-radius: 20px;
+}
+
+.subBox1{
+    display: flex;
+    flex-direction: row;
+}
+
+.subBox1-1{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subBox1-1 > img{
+    width: 100%;
+    height: auto;
+    max-width: 40px;
+    border-radius: 25px;
+}
+
+.subBox1-2{
+    width: 70%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.subBox1-2 > p{
+    padding: 0;
+}
+.subBox1-2 > p:nth-child(2){
+    color:  #828282;
+}
+
+.subBox2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+
+
+/*4. footer*/
+
+footer{
+    margin-top: auto;
+    padding: 20px;
+    background-color: #403d42;
+}
+
+footer > p{
+    text-align: center;
+}
+
+/*
+*********************
+*** MEDIA QUERIES ***
+*********************
+*/
+
+@media only screen and (max-width: 599px){
+
+    .box1-1{
+        width: 50% !important;
+    }
+
+    .box1-2{
+        width: 50% !important;
+    }
+
+    nav ul{
+        position: fixed;
+        width: 100%;
+        left: 100%;
+        top: 0;
+        height: 100vh;
+        transition: all .5s;
+        background-color: #181719;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .checkbtn{
+        display: block;
+    }
+    
+    .closeBtn{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 800px) {
+
+    
+    .box2{
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 0px;
+    }
+
+    .box2{
+        margin-top: 35px;
+    }
+
+  .checkbtn{
+      display: none;
+  }
+
+  .closeBtn{
+    display: none;
+  }
+}
+
+  @media only screen and (min-width: 1000px) {
+    
+    .box2-2 > img{
+        max-width: 500px;
+    }
+
+    .subBox{
+        top: 370px;
+        left: 40px;
+    }
+
+    .box2{
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 200px;
+    }
+  }
